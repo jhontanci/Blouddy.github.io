@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi catálogo - Cosméticos</title>
+  <style>
+    :root { --maxw:1000px; --pad:16px; font-family: system-ui, Arial, sans-serif; }
+    body { margin:0; padding:0; display:flex; justify-content:center; background:#f6f6f6; }
+    .container { width:100%; max-width:var(--maxw); padding:24px; }
+    header { text-align:center; margin-bottom:18px; }
+    header h1 { margin:0 0 8px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+    .card { background:#fff; border-radius:12px; padding:12px; box-shadow:0 8px 24px rgba(0,0,0,0.06); }
+    .card img { width:100%; height:180px; object-fit:cover; border-radius:8px; }
+    .card h3 { margin:10px 0 6px; font-size:1.05rem; }
+    .price { font-weight:700; color:#2b8a3e; margin-bottom:8px; }
+    .buttons { display:flex; gap:8px; }
+    .btn { flex:1; text-align:center; padding:10px 8px; border-radius:8px; text-decoration:none; display:inline-block; font-weight:600; }
+    .whatsapp { background:#25d366; color:#fff; }
+    .email { background:#1f6feb; color:#fff; }
+    footer { margin-top:18px; text-align:center; color:#666; font-size:0.95rem; }
+    /* responsive small */
+    @media (max-width:420px){ .card img { height:150px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mi catálogo - Cosméticos</h1>
+      <p>Productos naturales y envío a todo el país. Contáctame con 1 click.</p>
+    </header>
+
+    <!-- GRID DE PRODUCTOS: duplica .card para añadir más -->
+    <section class="grid">
+      <!-- Producto 1 -->
+      <article class="card">
+        <img src="prod1.jpg" alt="Crema facial hidratante">
+        <h3>Crema facial hidratante</h3>
+        <div class="price">S/ 49.00</div>
+        <div>Crema ligera para todo tipo de piel. 50 ml.</div>
+        <div style="margin-top:10px" class="buttons">
+          <!-- WhatsApp: reemplaza 51987654321 por tu número con código de país (sin +) -->
+          <a class="btn whatsapp" href="https://wa.me/51987654321?text=Hola%20quiero%20comprar%20la%20Crema%20facial%20hidratante%20(S%2F%2049.00)" target="_blank" rel="noopener">WhatsApp</a>
+          <!-- Email: mailto con asunto y cuerpo -->
+          <a class="btn email" href="mailto:tuemail@correo.com?subject=Compra%20Crema%20facial%20hidratante&body=Hola%2C%20quiero%20comprar%20la%20Crema%20facial%20hidratante.%20¿Está%20disponible%3F" target="_blank" rel="noopener">Correo</a>
+        </div>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="card">
+        <img src="prod2.jpg" alt="Sérum revitalizante">
+        <h3>Sérum revitalizante</h3>
+        <div class="price">S/ 79.00</div>
+        <div>Sérum con vitamina C. 30 ml.</div>
+        <div style="margin-top:10px" class="buttons">
+          <a class="btn whatsapp" href="https://wa.me/51987654321?text=Hola%20quiero%20comprar%20el%20S%C3%A9rum%20revitalizante%20(S%2F%2079.00)" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn email" href="mailto:tuemail@correo.com?subject=Compra%20S%C3%A9rum%20revitalizante&body=Hola%2C%20quiero%20comprar%20el%20S%C3%A9rum%20revitalizante.%20%C2%BFCu%C3%A1nto%20tiempo%20tarda%20el%20env%C3%ADo%3F" target="_blank" rel="noopener">Correo</a>
+        </div>
+      </article>
+
+      <!-- Producto 3 (ejemplo) -->
+      <article class="card">
+        <img src="prod3.jpg" alt="Set labial">
+        <h3>Set labial (3 tonos)</h3>
+        <div class="price">S/ 65.00</div>
+        <div>Set con 3 tonos de larga duración.</div>
+        <div style="margin-top:10px" class="buttons">
+          <a class="btn whatsapp" href="https://wa.me/51987654321?text=Hola%20quiero%20comprar%20el%20Set%20labial%20(3%20tonos)%20(S%2F%2065.00)" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn email" href="mailto:blouddy.by@gmail.com?subject=Compra%20Set%20labial&body=Hola%2C%20estoy%20interesada%20en%20el%20Set%20labial.%20%C2%BFQu%C3%A9%20colores%20tiene%3F" target="_blank" rel="noopener">Correo</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>¿Tienes dudas? Escríbeme por WhatsApp: <strong>+51 947 496 824</strong> (ejemplo)</p>
+    </footer>
+  </div>
+</body>
+</html>
